@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.calculator{
+    height: 36rem;
+    width: 30rem;
+    display:flex;
+    border:2px solid black;
+   position:absolute ;
+ 
+   right: 35%;
+   left:35%;
+   flex-wrap: wrap;
+   flex-direction: column;
+   
+}
+#text{
+   padding: 20px;
+   width: 26rem;
+   
+   margin: 6px;
+   border: 2px solid;
+}
+input[type="text"]{
+    
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: larger;
+   
+    
+ }
+ input[type="button"]{
+   padding: 20px;
+   width:5rem;
+   margin: 15px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: bolder;
+   font-size: 20px;
+ }
+ #equal{
+    width: 12rem;
+ }
+
+    </style>
+</head>
+<body>
+   <div class="calculator">
+<div class="text">
+    <input type="text" id="text" name="text">
+</div>
+<div class="button">
+  <input type="button" value="AC"   onclick="text.value=''">
+  <input type="button" value="DC"   onclick="text.value=text.value.toString().slice(0,-1)">
+<input type="button" value="."  onclick="text.value+='.'">
+<input type="button" value="/"   onclick="text.value+='/'">
+</div>
+<div class="button">
+    <input type="button" value="7"  onclick="text.value+='7'">
+    <input type="button" value="8"  onclick="text.value+='8'">
+  <input type="button" value="9"  onclick="text.value+='9'">
+  <input type="button" value="*"  onclick="text.value+='*'">
+  </div>
+  <div class="button">
+    <input type="button" value="4"  onclick="text.value+='4'">
+    <input type="button" value="5"  onclick="text.value+='5'">
+  <input type="button" value="6"  onclick="text.value+='6'">
+  <input type="button" value="-"  onclick="text.value+='-'">
+  </div>
+  <div class="button">
+    <input type="button" value="1"  onclick="text.value+='1'">
+    <input type="button" value="2"  onclick="text.value+='2'">
+  <input type="button" value="3"  onclick="text.value+='3'">
+  <input type="button" value="+"  onclick="text.value+='+'">
+  </div>
+  <div class="button">
+    <input type="button" value="00"  onclick="text.value+='00'">
+    <input type="button" value="0"  onclick="text.value+='0'">
+  <input type="button" value="=" id="equal" onclick="text.value=eval(text.value)">
+  
+  </div>
+   </div>
+</body>
+</html>
